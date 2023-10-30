@@ -17,7 +17,7 @@ Below is a list of tasks that need to be tackled. Mark tasks with `:hourglass_fl
 * Show that functions with antiderivatives have zero closed path integral (easy, by FTC)
 
 * Proof of Cauchy's Theorem (all subsections are independent):
-    * Define triangles
+    * Define triangles ⏳ (Edward)
         * Can be defined as triplet of points, but realistically is much more useful as 3-set of vectors as there is more structure. Technically 3 colinear points is not a triangle but since it is trivial to show that Cauchy's Theorem holds in this case we will treat it anyway.
     * Show that the interior of a triangle is non-empty
     * Define what it means to split up a triangle
