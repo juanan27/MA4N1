@@ -4,7 +4,7 @@ Below is a list of tasks that need to be tackled. Mark tasks with `:hourglass_fl
 
 * Formalisation
 * Definitions/Imports
-* Define complex functions as $f(x)+ig(y)$ where $f$ and $g$ are real functions (or show they are equivalent to all functions $\omega: \mathbb{C} \rightarrow \mathbb{C}$)
+* Define complex functions as $f(x,y)+ig(x,y)$ where $f$ and $g$ are real functions (or show they are equivalent to all functions $\omega: \mathbb{C} \rightarrow \mathbb{C}$)
 * Consider the notion of "length" and how this relates to complex numbers
 * Complex derivatives (could potentially define holomorphism)
 * Complex (path) integrals
