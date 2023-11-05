@@ -7,7 +7,10 @@ Below is a list of tasks that need to be tackled. Mark tasks with `:hourglass_fl
 * Define complex functions as $f(x)+ig(y)$ where $f$ and $g$ are real functions (or show they are equivalent to all functions $\omega: \mathbb{C} \rightarrow \mathbb{C}$)
 * Consider the notion of "length" and how this relates to complex numbers
 * Complex derivatives (could potentially define holomorphism)
-* Complex (path) integrals
+* Complex (path) integrals ⏳ (Juanan and Jaime)
+      Tried to get a good definition but didn't compute. Need to ask Damiano.
+      noncomputable def contourIntegral {γ : ℝ → ℂ} {a b : ℝ} {f : ℂ → ℂ} : ℂ :=
+      ∫ t in a..b, deriv γ t • f (γ t)
     * Define complex (path) integrals
     * Show additivity over the function AND over the path
     * Show the Fundamental Theorem of Calculus for complex (path) integrals 
