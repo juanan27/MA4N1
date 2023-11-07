@@ -11,17 +11,18 @@ Below is a list of tasks that need to be tackled. Mark tasks with `:hourglass_fl
     * Define complex (path) integrals
     * Show additivity over the function AND over the path
     * Show the Fundamental Theorem of Calculus for complex (path) integrals 
-    * The following proof is significantly better/easier than the one in the notes (complex Cauchy-Schwartz): https://math.stackexchange.com/a4764147
+    * The following proof is significantly better/easier than the one in the notes (complex Cauchy-Schwartz): https://math.stackexchange.com/a/4764147
         * Borrow the Cauchy-Schwartz inequality for real integrals
         * Borrow the monotonicity of integrals
 * Show that functions with antiderivatives have zero closed path integral (easy, by FTC)
 
 * Proof of Cauchy's Theorem (all subsections are independent):
-    * Define triangles ⏳ (Edward)
+    * Define triangles :white_check_mark: (Edward)
         * Can be defined as triplet of points, but realistically is much more useful as 3-set of vectors as there is more structure. Technically 3 colinear points is not a triangle but since it is trivial to show that Cauchy's Theorem holds in this case we will treat it anyway.
+    * Define the set bounded by a triangle :hourglass_flowing_sand: (Edward)
     * Show that the interior of a triangle is non-empty
     * Define what it means to split up a triangle
     * Show that the sum of the inner triangles sum to the outer triangle
-    * Show that at least one number is greater than or equal to the average of four numbers
+    * Show that at least one number is greater than or equal to the average of four numbers :white_check_mark: (Juan)
     * Show there exists a limit of nested closed sets
     * Show that the distance between two points in a triangle is less than the perimeter
