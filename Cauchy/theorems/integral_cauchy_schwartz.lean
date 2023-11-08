@@ -9,6 +9,7 @@ import Mathlib.MeasureTheory.Integral.IntervalIntegral
 import Mathlib.Analysis.SpecialFunctions.Integrals
 import Mathlib.Analysis.Convolution
 import Mathlib.Data.Complex.Exponential
+import Mathlib.Analysis.InnerProductSpace.Basic
 
 namespace theorems
 
@@ -19,4 +20,5 @@ let θ : ℝ  := Complex.arg (∫ x in a..b, f x)
 let M : ℝ  := sSup ((Complex.abs ∘ f) '' (Set.Icc a b))
 sorry
 
-end theorems
+-- this theorem already exists! see intervalIntegral.norm_integral_le_of_norm_le_const
+-- and I think it will be difficult to prove otherwise
