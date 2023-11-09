@@ -2,6 +2,7 @@ import Mathlib.Data.Complex.Basic
 import Mathlib.Data.Set.Basic
 import Cauchy.helpers.linear_paths
 import Mathlib.Topology.UnitInterval
+import Mathlib.Tactic
 
 namespace definitions
 open helpers
@@ -28,9 +29,14 @@ noncomputable def path (triangle : Triangle) : helpers.ComplexPath triangle.a tr
   let p3 := linear_path_a_b triangle.c triangle.a
   Path.trans (Path.trans p1 p2) p3
 
-def TriangularSet {triangle : Triangle} : Set ℂ :=
+def TriangularSet (triangle : Triangle) : Set ℂ :=
   {z | ∃ (t₁ t₂ t₃ : ℝ), t₁ ≥ 0 ∧ t₂ ≥ 0 ∧ t₃ ≥ 0 ∧
     t₁ + t₂ + t₃ = 1 ∧
     (z = t₁*triangle.a + t₂*triangle.b + t₃*triangle.c) }
+
+def TriangularBoundary (triangle : Triangle) : Set ℂ :=
+  linear_set_a_b triangle.a triangle.b ∪
+  linear_set_a_b triangle.b triangle.c ∪
+  linear_set_a_b triangle.c triangle.a
 
 end definitions
