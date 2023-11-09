@@ -30,6 +30,11 @@ noncomputable def lengthOfPath (f g: ℝ → ℝ ) (h: isC1Path f g) : ℝ :=
  have aux : ℝ → ℝ := λ x => Real.sqrt ((deriv f x)^2 + (deriv g x)^2)
  ∫t in (Set.Icc 0 1), aux t
 
+noncomputable def arc_length {a b : ℝ} {γ : ℝ → ℂ} : ℝ := ∫ t in a..b, norm ((deriv γ) t) 
+
+--- (Juan) In the second definition I didn't use a lambda function, which may make us avoid some problems (?). Errors keep coming, that's why I used noncomputable as well
+--- I'm pretty there has to be some way in which we can solve this problem. We may ask Damiano is this will affect when proving theorems or lemmas
+
 noncomputable def lengthOfPath1 (f : ℝ → ℂ) (h: DifferentiableOn ℝ f (Set.Icc 0 1) )  : ℝ :=
  have aux : ℝ → ℝ := λ x => Complex.abs (f x)
  ∫t in (Set.Icc 0 1), aux t
