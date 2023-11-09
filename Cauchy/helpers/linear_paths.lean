@@ -11,9 +11,6 @@ open unitInterval
 
 def ComplexPath := Path (X := ℂ)
 
-def linear_set_a_b (a b : ℂ) : Set ℂ :=
-  {z | ∃ t ∈ I, z = (1 - t)*a + t*b}
-
 def linear_path_a_b (a b : ℂ) : ComplexPath a b where -- this thing took me like 2/3 hours
   toFun := λ t : I => (1 - t)*a + t*b
   source' := by simp

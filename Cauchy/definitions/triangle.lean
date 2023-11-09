@@ -35,8 +35,8 @@ def TriangularSet (triangle : Triangle) : Set ℂ :=
     (z = t₁*triangle.a + t₂*triangle.b + t₃*triangle.c) }
 
 def TriangularBoundary (triangle : Triangle) : Set ℂ :=
-  linear_set_a_b triangle.a triangle.b ∪
-  linear_set_a_b triangle.b triangle.c ∪
-  linear_set_a_b triangle.c triangle.a
+  {z | ∃ (t₁ t₂ t₃ : ℝ), t₁ ≥ 0 ∧ t₂ ≥ 0 ∧ t₃ ≥ 0 ∧
+    t₁ + t₂ + t₃ = 1 ∧ t₁*t₂*t₃ = 0 ∧
+    (z = t₁*triangle.a + t₂*triangle.b + t₃*triangle.c) }
 
 end definitions
