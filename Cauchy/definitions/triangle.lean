@@ -14,6 +14,7 @@ structure Triangle where
   c : ℂ
 
 def nonTrivial (triangle : Triangle) : Prop :=
+  triangle.a ≠ triangle.b ∧
   ¬ ∃ t : ℝ, triangle.a + t * (triangle.b - triangle.a) = triangle.c
 
 -- unsure about computability, but actually may not be on further reflection
