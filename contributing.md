@@ -3,13 +3,13 @@
 Below is a list of tasks that need to be tackled. Mark tasks with `:hourglass_flowing_sand:⏳` for in progress, `:exclamation:❗` for need assistance and `:white_check_mark:✅` for finished, alongside your name(s) so that we can see who is working on what and avoid duplication of work. Please edit this file as necessary if tasks change or new ones are added!
 
 * Formalisation
-* Definitions/Imports
+* Definitions/Imports (Jaime⏳)
 * Define complex functions as $f(x, y)+ig(x, y)$ where $f$ and $g$ are real functions (or show they are equivalent to all functions $\omega: \mathbb{C} \rightarrow \mathbb{C}$)
 * Consider the notion of "length" and how this relates to complex numbers
 * Complex derivatives (could potentially define holomorphism)
 * Complex (path) integrals
     * Define complex (path) integrals
-    * Show additivity over the function AND over the path
+    * Show additivity over the function AND over the path (Jaime ⏳)
     * Show the Fundamental Theorem of Calculus for complex (path) integrals 
     * The following proof is significantly better/easier than the one in the notes (complex Cauchy-Schwartz): https://math.stackexchange.com/a/4764147
         * Borrow the Cauchy-Schwartz inequality for real integrals
