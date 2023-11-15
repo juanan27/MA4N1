@@ -47,3 +47,24 @@ have aux : ℝ → ℂ := λ t => ((Function.comp f  (ComplexPath α β)) t) * (
 ---The noncomputable before some definitions is to avoid errors
 
 end definitions
+
+namespace definitions_usingPaths
+noncomputable def aux (x y : ℂ ) (f : ℂ → ℂ) (γ : Path x y) : ℝ  → ℂ :=
+ (Function.comp f (Path.extend γ)) * (deriv (Path.extend γ))
+noncomputable def pathIntegral1 (x y : ℂ ) (f : ℂ → ℂ) (γ : Path x y) : ℂ :=  
+∫t in (Set.Icc 0 1), (aux x y f γ) t
+
+lemma pathIntAdd (x y : ℂ ) (f g : ℂ → ℂ) (γ : Path x y) : 
+(pathIntegral1 x y f γ) + (pathIntegral1 x y g γ) = (pathIntegral1 x y (f+g) γ) := by 
+unfold pathIntegral1
+unfold aux
+simp only [Pi.mul_apply, Function.comp_apply,Pi.add_apply]
+sorry
+
+lemma pathAddInt (x y z : ℂ) (f : ℂ → ℂ) (γ : Path x y) (α : Path y z):
+(pathIntegral1 x y f γ) + (pathIntegral1 y z f α) = (pathIntegral1 x z f (Path.trans γ α)) := by sorry
+
+lemma pathIntSymm (f: ℂ → ℂ) (γ : ComplexPath) :
+(pathIntegral1 y x f (Path.symm γ)) = -(pathIntegral1 x y f γ) := by sorry
+
+end definition_usingPaths
