@@ -11,9 +11,3 @@ lemma boundary_in_set {T : Triangle} : TriangularBoundary T ⊆ TriangularSet T 
   simp at *
   have ⟨a, b, c, d, e, f, g, _, i⟩ := x
   exact ⟨a, b, c, d, e, f, g, i⟩
-
---oh yes this will need some work if someone wants to have a crack at it
-lemma set_closed {T : Triangle} : IsClosed $ TriangularSet T := by
-  refine IsSeqClosed.isClosed ?_
-  unfold IsSeqClosed TriangularSet
-  sorry
